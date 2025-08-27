@@ -1,0 +1,41 @@
+file(REMOVE_RECURSE
+  "/home/yaoran/gitpro/demo/studyMuduo/lib/libmuduo_library_static.a"
+  "/home/yaoran/gitpro/demo/studyMuduo/lib/libmuduo_library_static.pdb"
+  "CMakeFiles/muduo_library_static.dir/Acceptor.cpp.o"
+  "CMakeFiles/muduo_library_static.dir/Acceptor.cpp.o.d"
+  "CMakeFiles/muduo_library_static.dir/Buffer.cpp.o"
+  "CMakeFiles/muduo_library_static.dir/Buffer.cpp.o.d"
+  "CMakeFiles/muduo_library_static.dir/Channel.cpp.o"
+  "CMakeFiles/muduo_library_static.dir/Channel.cpp.o.d"
+  "CMakeFiles/muduo_library_static.dir/CurrentThread.cpp.o"
+  "CMakeFiles/muduo_library_static.dir/CurrentThread.cpp.o.d"
+  "CMakeFiles/muduo_library_static.dir/DefaultPoller.cpp.o"
+  "CMakeFiles/muduo_library_static.dir/DefaultPoller.cpp.o.d"
+  "CMakeFiles/muduo_library_static.dir/EpollPoller.cpp.o"
+  "CMakeFiles/muduo_library_static.dir/EpollPoller.cpp.o.d"
+  "CMakeFiles/muduo_library_static.dir/EventLoop.cpp.o"
+  "CMakeFiles/muduo_library_static.dir/EventLoop.cpp.o.d"
+  "CMakeFiles/muduo_library_static.dir/EventLoopThread.cpp.o"
+  "CMakeFiles/muduo_library_static.dir/EventLoopThread.cpp.o.d"
+  "CMakeFiles/muduo_library_static.dir/EventLoopThreadPool.cpp.o"
+  "CMakeFiles/muduo_library_static.dir/EventLoopThreadPool.cpp.o.d"
+  "CMakeFiles/muduo_library_static.dir/InetAddress.cpp.o"
+  "CMakeFiles/muduo_library_static.dir/InetAddress.cpp.o.d"
+  "CMakeFiles/muduo_library_static.dir/Socket.cpp.o"
+  "CMakeFiles/muduo_library_static.dir/Socket.cpp.o.d"
+  "CMakeFiles/muduo_library_static.dir/TcpConnection.cpp.o"
+  "CMakeFiles/muduo_library_static.dir/TcpConnection.cpp.o.d"
+  "CMakeFiles/muduo_library_static.dir/TcpServer.cpp.o"
+  "CMakeFiles/muduo_library_static.dir/TcpServer.cpp.o.d"
+  "CMakeFiles/muduo_library_static.dir/Thread.cc.o"
+  "CMakeFiles/muduo_library_static.dir/Thread.cc.o.d"
+  "CMakeFiles/muduo_library_static.dir/Timestamp.cpp.o"
+  "CMakeFiles/muduo_library_static.dir/Timestamp.cpp.o.d"
+  "CMakeFiles/muduo_library_static.dir/easylogging++/easylogging++.cpp.o"
+  "CMakeFiles/muduo_library_static.dir/easylogging++/easylogging++.cpp.o.d"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/muduo_library_static.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()
