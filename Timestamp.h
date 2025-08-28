@@ -1,13 +1,14 @@
-/***********************************************************
+/********************************************************************
  * @Author: jiangshan yaoranyaoran2015@outlook.com
- * @Date: 2023-12-15 17:00:27
+ * @Date: 2024-08-04 15:51:01
  * @LastEditors: jiangshan yaoranyaoran2015@outlook.com
- * @LastEditTime: 2024-01-26 14:16:38
- * @FilePath: /demo/studyMuduo/Timestamp.h
- * @Description:
+ * @LastEditTime: 2025-08-28 21:49:31
+ * @FilePath: /my-muduo/Timestamp.h
+ * @Description: 
  * @
- * @Copyright (c) 2023 by jiangshan yaoranyaoran2015@outlook.com, All Rights Reserved.
- ************************************************************/
+ * @Copyright (c) 2025 by jiangshan yaoranyaoran2015@outlook.com, All Rights Reserved. 
+ *********************************************************************/
+
 
 #ifndef TIME_STAMP_H
 #define TIME_STAMP_H
@@ -45,6 +46,8 @@ public:
     {
         return static_cast<time_t>(microSecondsSinceEpoch_ / kMicroSecondsPerSecond);
     }
+
+    bool valid() const { return microSecondsSinceEpoch_ > 0; }
 
     // 失效的时间戳，返回一个值为0的Timestamp
     static Timestamp invalid()

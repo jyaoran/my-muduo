@@ -1,0 +1,11 @@
+add_executable(timerqueue_test TimerQueue_test.cpp)
+target_link_libraries(timerqueue_test muduo_library_static)
+
+add_executable(crossThreadTest crossThreadTest.cpp)
+target_link_libraries(crossThreadTest muduo_library_static)
+
+add_executable(echoServer echoServer.cc)
+target_link_libraries(echoServer muduo_library_static)
+
+add_executable(eventLoopThread_unitTest eventLoopThread_unitTest.cpp)
+target_link_libraries(eventLoopThread_unitTest muduo_library_static)

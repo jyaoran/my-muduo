@@ -11,6 +11,7 @@
 #include "EventLoop.h"
 #include "Poller.h"
 #include "easylogging++/easylogging++.h"
+#include "TimerQueue.h"
 
 #include <sys/eventfd.h>
 #include <errno.h>
@@ -36,6 +37,7 @@ EventLoop::EventLoop()
       callingPendingFunctor_(false),
       threadId_(CurrentThread::tid()),
       poller_(Poller::newDefaultPoller(this)),
+      timerQueue_(new TimerQueue(this)),
       wakeupFd_(createEventFd()),
       wakeupChannel_(new Channel(this, wakeupFd_)),
       currentActiveChannel_(nullptr)
@@ -172,4 +174,38 @@ void EventLoop::doPendingFunctors()
     }
 
     callingPendingFunctor_ = false;
+}
+
+void EventLoop::abortNotInLoopThread()
+{
+  LOG(FATAL) << "EventLoop::abortNotInLoopThread - EventLoop " << this
+            << " was created in threadId_ = " << threadId_
+            << ", current thread id = " <<  CurrentThread::tid();
+}
+
+
+TimerId EventLoop::runAt(Timestamp time, TimerCallback cb)
+{
+    // 在指定时间运行定时器事件
+    return timerQueue_->addTimer(std::move(cb), time, 0.0);
+}
+TimerId EventLoop::runAfter(double delay, TimerCallback cb)
+{
+    // 计算定时器到期的时间
+    Timestamp time(addTime(Timestamp::now(), delay));
+    return runAt(time, std::move(cb));
+}
+
+TimerId EventLoop::runEvery(double interval, TimerCallback cb)
+{
+    // 计算定时器到期的时间
+    Timestamp time(addTime(Timestamp::now(), interval));
+
+    return timerQueue_->addTimer(std::move(cb), time, interval);
+}
+
+void EventLoop::cancel(TimerId timerId)
+{
+    // 取消指定的定时器
+    return timerQueue_->cancel(timerId);
 }

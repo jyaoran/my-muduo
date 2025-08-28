@@ -1,13 +1,14 @@
-/*********************************************************** 
+/********************************************************************
  * @Author: jiangshan yaoranyaoran2015@outlook.com
- * @Date: 2024-02-20 16:42:19
+ * @Date: 2024-08-04 15:51:01
  * @LastEditors: jiangshan yaoranyaoran2015@outlook.com
- * @LastEditTime: 2024-02-28 16:25:29
- * @FilePath: /studyMuduo/Thread.h
+ * @LastEditTime: 2025-08-27 20:07:27
+ * @FilePath: /my-muduo/Thread.h
  * @Description: 
  * @
- * @Copyright (c) 2024 by jiangshan yaoranyaoran2015@outlook.com, All Rights Reserved. 
- ************************************************************/
+ * @Copyright (c) 2025 by jiangshan yaoranyaoran2015@outlook.com, All Rights Reserved. 
+ *********************************************************************/
+
 #pragma once
 
 #include "noncopyable.h"

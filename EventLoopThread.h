@@ -1,13 +1,14 @@
-/*********************************************************** 
+/********************************************************************
  * @Author: jiangshan yaoranyaoran2015@outlook.com
- * @Date: 2024-02-21 10:30:33
+ * @Date: 2024-08-04 15:51:01
  * @LastEditors: jiangshan yaoranyaoran2015@outlook.com
- * @LastEditTime: 2024-02-21 13:50:44
- * @FilePath: /studyMuduo/EventLoopThread.h
+ * @LastEditTime: 2025-08-27 20:05:53
+ * @FilePath: /my-muduo/EventLoopThread.h
  * @Description: 
  * @
- * @Copyright (c) 2024 by jiangshan yaoranyaoran2015@outlook.com, All Rights Reserved. 
- ************************************************************/
+ * @Copyright (c) 2025 by jiangshan yaoranyaoran2015@outlook.com, All Rights Reserved. 
+ *********************************************************************/
+
 #pragma once
 
 #include "noncopyable.h" 
